@@ -144,7 +144,8 @@ int main () //Função princial, sempre a primeira a ser executada
 	    printf("Escolha a opção desejada:\n\n");
 	    printf("\t1- Incluir Usuário\n");
 	    printf("\t2- Consultar Usuário\n");
-	    printf("\t3- Deletar Usuário\n\n\n\n");
+	    printf("\t3- Deletar Usuário\n");
+	    printf("\t4- Sair do Sistema\n\n\n");
 	    printf("Opção: "); //Fim do Menu
 	
 	    scanf("%d", &opcao); //Armazenando a escolha do usuário
@@ -153,18 +154,23 @@ int main () //Função princial, sempre a primeira a ser executada
 	
 	    switch(opcao) //Início da variável
 	    {
-	    	case 1: //Início da seleção do menu
+	    	case 1: //opção de seleção do menu
 	    	incluir(); //Chamada de funções
 	        break; // Fecha a seleção 
 	        
-	        case 2: // Início da seleção do menu
+	        case 2: // opção de seleção do menu
 	        consultar(); //Chamada de funções
 		    break; // Fecha a seleção
 			
-			case 3: //Início da seleção do menu
+			case 3: //opção de seleção do menu
 		    deletar(); //Chamada de funções
     		break; //Fecha a seleção
     		
+    		case 4: //opção de seleção do menu
+    		printf("Obrigado por utilizar o sistema!\n");
+            return 0; //sai do sistema
+            break; //Fecha a seleção
+    	
     		default: //Análise de opção inexistente
 			printf("Essa opcão não está disponível!\n"); // Aviso ao usuário
 			system("pause"); // Pausa a tela para o usuário ler a mensagem - pressione uma tecla para continuar
